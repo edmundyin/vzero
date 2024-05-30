@@ -1,22 +1,21 @@
 .container{
-    background-color: #242328;
     border-radius: 15px;
     margin-left: 20px;
     margin-top: 20px;
     margin-right: 20px;
-    animation: fadeIn 1s;
+    animation: fadeIn 3s;
+}
+
+.button{
+    background-color: none;
 }
 
 @keyframes fadeIn{
     0%{
         opacity: 0;
-        filter: blur(5px);
-        transform: translateY(-100%);
     }
     100%{
         opacity: 1;
-        filter: blur(0);
-        transform: translateY(0);
     }
 }
 
@@ -39,36 +38,53 @@
 }
 
 .home{
-    display:flex;
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    font-family: Impact, fantasy;
+    font-family: tinos;
   }
 
 .vzero{
+    display: flex;
     color: white;
     margin: 0 0 5px 15px;
     font-size: 50px;
-}
-
-.navIcons{
-    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
     flex-grow: 1;
-    flex-shrink: 1;
-    justify-content: flex-end;
-    align-content: center;
-    color: white;
-    gap: 20px;
-    font-size: 1.8rem;
-    margin-left: 20px;
-    margin-right: 15px;
+    position: relative;
 }
 
-.FAQ, .shoppingCart, .personalID {
-    transition: transform 0.3s ease-in;
-  }
+.faIdCard{
+    position: absolute;
+    color: white;
+    right: 0;
+    font-size: 1.8rem;
+    margin: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faShoppingCart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 20px;
+    right: 0;
+    position: absolute;
+}
+
+.tinos {
+    font-family: "Tinos", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
   
-  .FAQ:hover, .shoppingCart:hover, .personalID:hover {
+  .faShoppingCart:hover, .faIdCard:hover {
     transform: scale(1.2); 
   }
 
@@ -76,7 +92,7 @@
     .vzero{
         font-size: 35px;
     }
-    .navIcons{
+    .faIdCard, .faShoppingCart{
         font-size: 1.4rem;
     }
 }

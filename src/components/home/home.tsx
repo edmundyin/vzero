@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
 import styles from './home.module.css';
 import Navbar from '../navbar/navbar';
-import config from './config';
 
 const Home: React.FC = () => {
 
@@ -55,15 +56,18 @@ const Home: React.FC = () => {
     // CODE FOR IMAGE TRACK SCROLLING
     const track = document.getElementById(styles.imagetrack) as HTMLElement;
 
-    const handleOnDown = (e: MouseEvent | TouchEvent): void => {
-      const rect = track.getBoundingClientRect();
-      const clientX = e instanceof MouseEvent ? e.clientX : e.touches[0].clientX;
-      const clientY = e instanceof MouseEvent ? e.clientY : e.touches[0].clientY;
+    const handleOnDown = (e: MouseEvent | TouchEvent) => {
+      let clientX: number;
 
-      // Check if the click is inside the track
-      if (clientX >= rect.left && clientX <= rect.right && clientY >= rect.top && clientY <= rect.bottom) {
-        track.dataset.mouseDownAt = clientX.toString();
+      if (e instanceof MouseEvent) {
+        clientX = e.clientX;
+      } else if (e instanceof TouchEvent) {
+        clientX = e.touches[0].clientX;
+      } else {
+        throw new Error("Unsupported event type");
       }
+
+      track.dataset.mouseDownAt = clientX.toString();
     };
 
     const handleOnUp = (): void => {
@@ -81,7 +85,30 @@ const Home: React.FC = () => {
       const percentage = (mouseDelta / maxDelta) * -100;
       const prevPercentage = parseFloat(track.dataset.prevPercentage || "0");
       const nextPercentageUnconstrained = prevPercentage + percentage;
-      const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -75);
+      const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+
+      track.dataset.percentage = nextPercentage.toString();
+
+      track.animate({
+        transform: `translate(${nextPercentage}%, -50%)`
+      }, { duration: 1200, fill: "forwards" });
+
+      Array.from(track.getElementsByClassName(styles.image)).forEach(image => {
+        (image as HTMLElement).animate({
+          objectPosition: `${100 + nextPercentage}% center`
+        }, { duration: 1200, fill: "forwards" });
+      });
+    };
+
+    const handleOnWheel = (e: WheelEvent): void => {
+      e.preventDefault();
+      const delta = e.deltaY;
+      const maxDelta = window.innerWidth / 2;
+
+      const percentage = (delta / maxDelta) * -100;
+      const prevPercentage = parseFloat(track.dataset.percentage || "0");
+      const nextPercentageUnconstrained = prevPercentage + percentage;
+      const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
 
       track.dataset.percentage = nextPercentage.toString();
 
@@ -102,6 +129,7 @@ const Home: React.FC = () => {
     window.addEventListener("touchend", handleOnUp);
     window.addEventListener("mousemove", handleOnMove);
     window.addEventListener("touchmove", (e: TouchEvent) => handleOnMove(e));
+    window.addEventListener("wheel", handleOnWheel, { passive: false });
 
     return () => {
       window.removeEventListener("mousedown", handleOnDown);
@@ -110,49 +138,56 @@ const Home: React.FC = () => {
       window.removeEventListener("touchend", handleOnUp);
       window.removeEventListener("mousemove", handleOnMove);
       window.removeEventListener("touchmove", (e: TouchEvent) => handleOnMove(e));
+      window.removeEventListener("wheel", handleOnWheel);
     };
   }, []);
 
   return (
-
     <div className={styles.body}>
-      <Navbar />
-      <div className={styles.shopkaizen}>
-        <div id={styles.kaizen}>
-          <img className={styles.kaizencard} src={config.pantsURL} />
+      <Navbar />  
+        <div className={styles.scrollDown}>
+          <FontAwesomeIcon icon={faAnglesDown} />
         </div>
+      <div className={styles.shopkaizen}>
         <div className={styles.trackContainer}>
           <div id={styles.imagetrack} data-mouse-down-at="0" data-prev-percentage="0">
-            <img className={styles.image} src={config.img1} draggable="false" />
-            <img className={styles.image} src={config.img2} draggable="false" />
-            <img className={styles.image} src={config.img3} draggable="false" />
-            <img className={styles.image} src={config.img4} draggable="false" />
-            <img className={styles.image} src={config.img5} draggable="false" />
+            <img className={styles.image} src="/components/pictures/alphane.png" draggable="false" />
+            <img className={styles.image} src="/components/pictures/burden.png" draggable="false" />
+            <img className={styles.image} src="/components/pictures/burden2.png" draggable="false" />
+            <img className={styles.image} src="/components/pictures/poison.jpeg" draggable="false" />
+            <img className={styles.image} src="/components/pictures/sleepwalker.jpeg" draggable="false" />
+            <img className={styles.image} src="/components/pictures/ticino.jpeg" draggable="false" />
+            <img className={styles.image} src="/components/pictures/vecchio.png" draggable="false" />
           </div>
         </div>
       </div>
-
-      <div className={styles.cardcontainer}>
-        <div id={styles.card} className={styles.card}>
-          <div id={styles.gradient} className={styles.gradient}></div>
-          <div className={styles.leftside}>
-            <span className={styles.poetsen}>
-              VZERO, where performance converges seamlessly with
-              style in the dynamic realm of fashion. Born from the collective passion of two friends,
-              our adventure commenced with a shared love for rock climbing.
-            </span>
-            <a href="https://www.instagram.com/vzero.xyz/" target='_blank'>
-              <span className={styles.poetsen}>instagram</span>
-            </a>
-          </div>
-          <div className={styles.rightside}>
-            <img src={config.imageUrl} />
+      <div className={styles.fullScreen}>
+        <div className={styles.gradientOverlay}> </div>
+          <img className={`${styles.fullScreenImage}`} src="/components/pictures/alphane.png" alt="Full screen" />
+        </div>
+      
+      <div id={styles.nextPage}>
+        <div className={styles.cardcontainer}>
+          <div id={styles.card} className={styles.card}>
+            <div id={styles.gradient} className={styles.gradient}></div>
+            <div className={styles.leftside}>
+              <span className={styles.poetsen}>
+                VZERO, where performance converges seamlessly with
+                style in the dynamic realm of fashion. Born from the collective passion of two friends,
+                our adventure commenced with a shared love for rock climbing.
+              </span>
+              <a href="https://www.instagram.com/vzero.xyz/" target='_blank'>
+                <span className={styles.poetsen}>instagram</span>
+              </a>
+            </div>
+            <div className={styles.rightside}>
+              <img src="/components/pictures/IMG_6710.jpg" />
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 
 export default Home;
