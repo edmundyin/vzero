@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faIdCard, faClipboardQuestion, faShoppingBag, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faIdCard, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import styles from './navbar.module.css';
 
 const Navbar: React.FC = () =>{
@@ -25,12 +25,12 @@ const Navbar: React.FC = () =>{
             <div className={styles.container}>
                 <div className={styles.home}>
                     <div className={styles.vzero}>
-                        <Link className={styles.link} to="/">vzero</Link>
+                        <Link className={styles.link} to="/home">vzero</Link>
                     </div>
                     <div className={styles.faShoppingCart}>
                         <Link className={styles.link} to="/cart">
                             <FontAwesomeIcon icon={faShoppingCart} />
-                        </Link>
+                            </Link>
                     </div>
                     <div className={styles.faIdCard}>
                             <Link className={styles.link} to="/userinfo">

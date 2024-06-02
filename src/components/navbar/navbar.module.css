@@ -65,6 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 
 .faShoppingCart{
@@ -75,6 +76,7 @@
     margin: 20px;
     right: 0;
     position: absolute;
+    color: white;
 }
 
 .tinos {
@@ -86,6 +88,7 @@
   
   .faShoppingCart:hover, .faIdCard:hover {
     transform: scale(1.2); 
+    cursor: pointer;
   }
 
 @media (max-width: 350px) { 

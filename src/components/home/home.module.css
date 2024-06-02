@@ -7,6 +7,11 @@ body{
     overflow-x: hidden;
 }
 
+.link{
+    color: white;
+    text-decoration: none;
+}
+
 .trackContainer {
     display: flex;
     position: relative;
@@ -24,7 +29,7 @@ body{
     margin-bottom: 7%;
 }
 
-.scrollDown {
+.shopNow {
     position: fixed;
     bottom: 20px;
     left: 50%;
@@ -32,18 +37,22 @@ body{
     padding: 10px 20px;
     font-size: 16px;
     color: white;
+    border: 1.3px solid steelblue;
     border-radius: 5px;
     cursor: pointer;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.5;
-  }
+    opacity: 0.7;
+    font-family: "Poetsen One", sans-serif;
+    background-color: transparent;
+}
 
-.scrollDown:hover{
+.shopNow:hover{
     opacity: 1;
     cursor: pointer;
+    
 }
 
 @keyframes fadeIn{
@@ -126,6 +135,7 @@ body{
     margin-right: 25px;
     margin-bottom: 20px;
     animation: fadeIn 1s;
+    display: none;
   }
 
 
@@ -320,7 +330,7 @@ body{
     }
 }
 
-@media (max-width: 1370px) {
+@media (max-width: 700px) {
   .trackContainer {
     display: none;
   }
@@ -345,7 +355,7 @@ body{
   }
 }
 
-@media (min-width: 1370px) {
+@media (min-width: 700px) {
   .fullScreenImage {
     display: none;
   }

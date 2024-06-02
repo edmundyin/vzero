@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
 import styles from './home.module.css';
 import Navbar from '../navbar/navbar';
+import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
 
@@ -145,9 +145,9 @@ const Home: React.FC = () => {
   return (
     <div className={styles.body}>
       <Navbar />  
-        <div className={styles.scrollDown}>
-          <FontAwesomeIcon icon={faAnglesDown} />
-        </div>
+        <div className={styles.shopNow}>
+          <Link className ={styles.link} to="/shop"> shop now </Link>
+          </div>
       <div className={styles.shopkaizen}>
         <div className={styles.trackContainer}>
           <div id={styles.imagetrack} data-mouse-down-at="0" data-prev-percentage="0">

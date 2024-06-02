@@ -1,0 +1,13 @@
+  
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.buyKaizen{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
