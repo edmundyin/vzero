@@ -1,7 +1,7 @@
 .container{
     border-radius: 15px;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-right: 20px;
     animation: fadeIn 3s;
 }
@@ -17,6 +17,31 @@
     100%{
         opacity: 1;
     }
+}
+
+.sidebar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 1001; /* Ensure it sits on top of everything */
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+}
+
+.sidebar.open {
+    width: 100px; /* Set the width of the sidebar when open */
+    background-color: black;
+    z-index: 1001;
+    transition: 1s;
+}
+
+.dimmed {
+    opacity: 0.6;
+    transition: opacity 0.5s;
 }
 
 /* .hidden{
@@ -41,12 +66,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: tinos;
   }
 
 .vzero{
     display: flex;
-    color: white;
+    color: black;
     margin: 0 0 5px 15px;
     font-size: 50px;
     text-align: center;
@@ -54,6 +78,7 @@
     justify-content: center;
     flex-grow: 1;
     position: relative;
+    font-family: "DM Serif Text", serif;
 }
 
 .faIdCard{
@@ -73,10 +98,21 @@
     align-items: center;
     justify-content: center;
     font-size: 1.8rem;
-    margin: 20px;
+    margin-right: 110px;
     right: 0;
     position: absolute;
     color: white;
+}
+
+.faBars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    font-size: 1.8rem;
+    position: absolute;
+    color: white;
+    margin-left: 110px;
 }
 
 .tinos {
@@ -85,17 +121,21 @@
     font-style: italic;
 }
 
-  
-  .faShoppingCart:hover, .faIdCard:hover {
+.faShoppingCart:hover, .faBars:hover {
     transform: scale(1.2); 
     cursor: pointer;
-  }
+}
 
-@media (max-width: 350px) { 
+@media (max-width: 430px) { 
     .vzero{
         font-size: 35px;
     }
-    .faIdCard, .faShoppingCart{
+    .faShoppingCart{
+        margin-right: 15px;
+        font-size: 1.4rem;
+    }
+    .faBars{
+        margin-left: 15px;
         font-size: 1.4rem;
     }
 }

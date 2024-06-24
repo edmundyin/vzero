@@ -10,13 +10,14 @@ export default defineConfig({
   root,
   plugins: [reactRefresh()],
   build: {
-    // outDir,
+    // outDir: 'build',
     // emptyOutDir: true,
     // rollupOptions: {
     //   input: {
     //     App: resolve(root, 'index.html'),
     //     home: resolve(root, 'home', 'index.html'),
     //     landing: resolve(root, 'landing', 'index.html'),
+    //     shop: resolve(root, 'shop', 'index.html')
     //   }
     // }
   }

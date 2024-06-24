@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useEffect } from 'react';
 import styles from './home.module.css';
 import Navbar from '../navbar/navbar';
 import { Link } from 'react-router-dom';
@@ -144,10 +143,15 @@ const Home: React.FC = () => {
 
   return (
     <div className={styles.body}>
-      <Navbar />  
+      <Navbar />
+      <div className={styles.bottomButtons}>
         <div className={styles.shopNow}>
-          <Link className ={styles.link} to="/shop"> shop now </Link>
-          </div>
+          <Link className={styles.link} to="/shop"> shop now </Link>
+        </div>
+        <div className={styles.about}>
+          <Link className={styles.link} to="/about"> about us </Link>
+        </div>
+      </div>
       <div className={styles.shopkaizen}>
         <div className={styles.trackContainer}>
           <div id={styles.imagetrack} data-mouse-down-at="0" data-prev-percentage="0">
@@ -163,9 +167,9 @@ const Home: React.FC = () => {
       </div>
       <div className={styles.fullScreen}>
         <div className={styles.gradientOverlay}> </div>
-          <img className={`${styles.fullScreenImage}`} src="/components/pictures/alphane.png" alt="Full screen" />
-        </div>
-      
+        <img className={`${styles.fullScreenImage}`} src="/components/pictures/alphane.png" alt="Full screen" />
+      </div>
+
       <div id={styles.nextPage}>
         <div className={styles.cardcontainer}>
           <div id={styles.card} className={styles.card}>

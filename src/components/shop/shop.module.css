@@ -1,0 +1,67 @@
+.kaizenPants{
+    display: flex;
+    margin: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 80vh;
+    object-fit: contain;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    font-family: 'Helvetica Neue', Helvetica bold, Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-size: 15px;
+    color: white;
+    opacity: 0.8;
+    margin-left: 20px;
+}
+
+.price{
+    display: flex;
+    margin-left: 15px;
+}
+
+.description{
+    bottom: 20px;
+    margin-right: 5px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.list{
+    list-style-type: none;
+    color: white;
+    opacity: 0.8;
+}
+
+li{
+    margin: 25px 0;
+}
+
+@media (max-width: 800px){
+    .kaizenPants{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 430px){
+    .kaizenPants{
+        margin: 5px;
+        height:25vh;
+    }
+    .title{
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 40px;
+    }
+    .price{
+        top: 0;
+    }
+}
