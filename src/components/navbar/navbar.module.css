@@ -146,6 +146,16 @@ body{
     transform: translateX(0%);
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
 @media (max-width: 430px) { 
     .vzero{
         font-size: 35px;

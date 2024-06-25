@@ -12,6 +12,7 @@ const Navbar: React.FC = () =>{
 
     return(
         <>
+            {cartOpen && <div className={styles.overlay} onClick={handleCloseCart}></div>}
             <div className={`${styles.cart} ${cartOpen ? styles.open : ''}`}>
                 <div className={styles.header}>
                     <h1 className={styles.title}> YOUR CART </h1>

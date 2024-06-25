@@ -1,15 +1,8 @@
 import Navbar from "../navbar/navbar";
 import styles from "./shop.module.css"
-import { useState } from "react";
 // import { products } from "../../products";
 
 const Shop: React.FC = () => {
-
-    const [selectedSize, setSelectedSize] = useState("0.8");
-
-    const changeStyle = () => {
-
-    }
 
     return (
         <div className={styles.container}>
