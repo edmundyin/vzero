@@ -1,52 +1,41 @@
 import { Link } from 'react-router-dom';
-// import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 import styles from './navbar.module.css';
 
 const Navbar: React.FC = () =>{
 
-    // const [cartOpen, setCartOpen] = useState(false);
-
-    // const toggleCart = () => {
-    //     setCartOpen(!cartOpen);
-    // };
-
-
-    // const observer = new IntersectionObserver((entries) =>{
-    //     entries.forEach((entry) =>{
-    //         console.log(entry);
-    //         if(entry.isIntersecting){
-    //             entry.target.classList.add(styles.show)
-    //         }
-    //         else{
-    //             entry.target.classList.remove(styles.show);
-    //         }
-    //     });
-    // });
-
-    // const hiddenElements = document.querySelectorAll(styles.hidden);
-    // hiddenElements.forEach((el) => observer.observe(el));
+    const [cartOpen, setCartOpen] = useState(false);
+    const handleShowCart = () => setCartOpen(true);
+    const handleCloseCart = () => setCartOpen(false);
 
     return(
-        <div /*className={styles.hidden}*/ >
+        <>
+            <div className={`${styles.cart} ${cartOpen ? styles.open : ''}`}>
+                <div className={styles.header}>
+                    <h1 className={styles.title}> YOUR CART </h1>
+                        <div className={styles.Xmark} onClick={handleCloseCart}> 
+                            <FontAwesomeIcon icon={faXmark} /> 
+                        </div>
+                </div>
+            </div>
             <div className={styles.container}>
                 <div className={styles.home}>
                     <div className={styles.vzero}>
                         <Link className={styles.link} to="/home">vzero</Link>
                     </div>
-                    <div className={styles.faShoppingCart} >
-                        <FontAwesomeIcon icon={faShoppingCart} />
-                    </div>
-                    <div className={styles.sidebar}>
-                        <h1>Your Cart</h1>
-                    </div>
+                    {!cartOpen && (
+                        <div className={styles.faShoppingCart} onClick={handleShowCart}>
+                            <FontAwesomeIcon icon={faShoppingCart} />
+                        </div>
+                    )}
                     <div className ={styles.faBars}>
                         <FontAwesomeIcon icon={faBars} />
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

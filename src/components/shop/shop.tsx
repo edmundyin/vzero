@@ -5,7 +5,11 @@ import { useState } from "react";
 
 const Shop: React.FC = () => {
 
-    const [selected, setSelected] = useState("opacity");
+    const [selectedSize, setSelectedSize] = useState("0.8");
+
+    const changeStyle = () => {
+
+    }
 
     return (
         <div className={styles.container}>
