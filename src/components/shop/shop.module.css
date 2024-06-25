@@ -7,10 +7,15 @@
     object-fit: contain;
 }
 
+h1{
+    margin-top: 2px;
+}
+
 .information{
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: 90vw;
+    margin-left: 30px;
 }
 
 .title{
@@ -21,7 +26,8 @@
     font-size: 15px;
     color: white;
     opacity: 0.8;
-    margin-left: 20px;
+    width: 95vw;
+    margin-left: 30px;
 }
 
 .price{
@@ -29,25 +35,102 @@
     margin-left: 15px;
 }
 
-.description{
-    bottom: 20px;
-    margin-right: 5px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+.sizes{
+    display: flex;
+    color: white;
+    flex-direction: row;
+    font-family: 'Helvetica Neue', Helvetica bold, Arial, sans-serif;
+    margin-left: 30px;
+    align-items: center;
 }
 
-.list{
-    list-style-type: none;
-    color: white;
+.selectSize{
+    display: flex;
+    font-size: 17px;
+    margin-right: 10px;
+    margin-top: 10px;
     opacity: 0.8;
 }
 
+.size{
+    margin: 7px;
+    font-size: 17px;
+    opacity: 0.8;
+    border: white;
+    border: 3px solid white; /* Adds white borders with border radius */
+    padding: 5px 10px; /* Adds padding inside the button for better look */
+    background-color: transparent; 
+}
+
+.size.selected{
+    opacity: 1;
+}
+
+.size:hover{
+    color: white;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.sizeChart{
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.image{
+    width: 600px;
+    height: auto;
+}
+
+.addToCart{
+    display: flex;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+.cart{
+    font-size: 25px;
+    color: white;
+    opacity: 0.8;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border: 5px solid white;
+    padding: 5px 10px;
+}
+
+.cart:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.description{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+
+.list{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-left: 20;
+    list-style-type: none;
+    color: white;
+    opacity: 0.8;
+    font-size: 15px;
+}
+
 li{
-    margin: 25px 0;
+    margin-top: 10px;
+    margin-left: 30px;
 }
 
 @media (max-width: 800px){
     .kaizenPants{
         flex-direction: column;
+    }
+    li{
+        margin-left: 0;
     }
 }
 
@@ -59,9 +142,14 @@ li{
     .title{
         justify-content: center;
         flex-direction: column;
-        margin-left: 40px;
+        margin-bottom: 0px;
     }
     .price{
         top: 0;
+        margin: 0;
+    }
+
+    .list{
+        padding: 20px;
     }
 }

@@ -149,7 +149,9 @@ const Home: React.FC = () => {
           <Link className={styles.link} to="/shop"> shop now </Link>
         </div>
         <div className={styles.about}>
-          <Link className={styles.link} to="/about"> about us </Link>
+          <a href="https://www.instagram.com/vzero.xyz/" target='_blank'>
+            <span className={styles.link}> about us </span>
+          </a>
         </div>
       </div>
       <div className={styles.shopkaizen}>
@@ -167,7 +169,7 @@ const Home: React.FC = () => {
       </div>
       <div className={styles.fullScreen}>
         <div className={styles.gradientOverlay}> </div>
-        <img className={`${styles.fullScreenImage}`} src="/components/pictures/alphane.png" alt="Full screen" />
+        <img className={`${styles.fullScreenImage}`} src="/components/pictures/IMG_6802.jpg" alt="Full screen" />
       </div>
 
       <div id={styles.nextPage}>
