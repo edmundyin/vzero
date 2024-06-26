@@ -33,6 +33,7 @@ h1{
 .price{
     display: flex;
     margin-left: 15px;
+    margin-top: 0;
 }
 
 .sizes{
@@ -125,6 +126,15 @@ li{
     margin-left: 30px;
 }
 
+
+@media(max-width: 1270px){
+    .image{
+        width: 450px;
+        height: auto;
+    }
+}
+
+
 @media (max-width: 800px){
     .kaizenPants{
         flex-direction: column;
@@ -135,6 +145,9 @@ li{
 }
 
 @media (max-width: 430px){
+    body{
+        overflow-y: scroll;
+    }
     .kaizenPants{
         margin: 5px;
         height:25vh;

@@ -3,13 +3,12 @@ import styles from "./shop.module.css"
 // import { products } from "../../products";
 
 const Shop: React.FC = () => {
-
     return (
         <div className={styles.container}>
             <div>
                 <Navbar />
                 <div className={styles.kaizenPants}>
-                    <img src="/components/pictures/test.jpg" />
+                    <img src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Ftest.jpg?alt=media" />
                     <div className={styles.information}>
                         <div className={styles.title}>
                             <h1>KAIZEN PANTS</h1>
@@ -23,7 +22,7 @@ const Shop: React.FC = () => {
                             <div className={styles.size}>L</div>
                         </div>
                         <div className={styles.sizeChart}>
-                            <img className={styles.image} src="/components/pictures/sizechart.png" draggable="false" />
+                            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fsizechart.png?alt=media" draggable="false" />
                         </div>
                         <div className={styles.addToCart}>
                             <h1 className={styles.cart}> ADD TO CART </h1>

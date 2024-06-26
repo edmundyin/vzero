@@ -8,6 +8,7 @@ import Shop from './components/shop/shop';
 import About from './components/about/about';
 
 const App: React.FC = () => {
+
   return (
     <>
       <HashRouter>

@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import styles from './landing.module.css';
 
 const Landing: React.FC = () => {
+
   return (
     <div className={styles.vidBg}>
       <video autoPlay loop muted>
-        <source src="vzerobg.mp4" type="video/mp4" />
+        <source src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/videos%2Fvzerobg.mp4?alt=media" type="video/mp4" />
       </video>
       <div className={styles.container}>
         <div className={styles.vzero}>
@@ -23,6 +24,7 @@ const Landing: React.FC = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

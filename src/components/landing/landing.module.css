@@ -7,7 +7,6 @@
     overflow: hidden;
     z-index: -1;
     animation: fadeIn 2s ease-in-out;
-
 }
 
 .vidBg video {
@@ -42,7 +41,7 @@
 
 .enter {
     margin: 0px;
-    animation: fadeIn 7s ease-in-out;
+    animation: fadeIn 6s ease-in-out;
 }
 
 .link {
@@ -144,5 +143,11 @@
 
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 430px){
+    .vzero{
+        margin-bottom: 20px;
     }
 }

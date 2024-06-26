@@ -157,19 +157,19 @@ const Home: React.FC = () => {
       <div className={styles.shopkaizen}>
         <div className={styles.trackContainer}>
           <div id={styles.imagetrack} data-mouse-down-at="0" data-prev-percentage="0">
-            <img className={styles.image} src="/components/pictures/alphane.png" draggable="false" />
-            <img className={styles.image} src="/components/pictures/burden.png" draggable="false" />
-            <img className={styles.image} src="/components/pictures/burden2.png" draggable="false" />
-            <img className={styles.image} src="/components/pictures/poison.jpeg" draggable="false" />
-            <img className={styles.image} src="/components/pictures/sleepwalker.jpeg" draggable="false" />
-            <img className={styles.image} src="/components/pictures/ticino.jpeg" draggable="false" />
-            <img className={styles.image} src="/components/pictures/vecchio.png" draggable="false" />
+            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Falphane.png?alt=media" draggable="false" />
+            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fburden.png?alt=media" draggable="false" />
+            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fburden2.png?alt=media" draggable="false" />
+            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fpoison.jpeg?alt=media" draggable="false" />
+            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fsleepwalker.jpeg?alt=media" draggable="false" />
+            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fticino.jpeg?alt=media" draggable="false" />
+            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fvecchio.png?alt=media" draggable="false" />
           </div>
         </div>
       </div>
       <div className={styles.fullScreen}>
         <div className={styles.gradientOverlay}> </div>
-        <img className={`${styles.fullScreenImage}`} src="/components/pictures/IMG_6802.jpg" alt="Full screen" />
+        <img className={`${styles.fullScreenImage}`} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2FIMG_6802.jpg?alt=media" alt="Full screen" />
       </div>
 
       <div id={styles.nextPage}>
@@ -187,7 +187,7 @@ const Home: React.FC = () => {
               </a>
             </div>
             <div className={styles.rightside}>
-              <img src="/components/pictures/IMG_6710.jpg" />
+              <img src="public/images/IMG_6710.jpg" />
             </div>
           </div>
         </div>
