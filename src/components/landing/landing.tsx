@@ -6,8 +6,9 @@ const Landing: React.FC = () => {
 
   return (
     <div className={styles.vidBg}>
-      <video autoPlay loop muted>
+      <video autoPlay loop muted playsInline>
         <source src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/videos%2Fvzerobg.mp4?alt=media" type="video/mp4" />
+        <source src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/videos%2Fvzerobg.webm?alt=media" type="webm/mp4" />
       </video>
       <div className={styles.container}>
         <div className={styles.vzero}>

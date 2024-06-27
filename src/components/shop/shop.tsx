@@ -11,7 +11,7 @@ const Shop: React.FC = () => {
                     <img src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Ftest.jpg?alt=media" />
                     <div className={styles.information}>
                         <div className={styles.title}>
-                            <h1>KAIZEN PANTS</h1>
+                            <h1 className={styles.itemTitle}>KAIZEN PANTS</h1>
                             <p className={styles.price}>$89</p>
                         </div>
                         <div className={styles.sizes}>
