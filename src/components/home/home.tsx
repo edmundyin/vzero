@@ -169,7 +169,7 @@ const Home: React.FC = () => {
       </div>
       <div className={styles.fullScreen}>
         <div className={styles.gradientOverlay}> </div>
-        <img className={`${styles.fullScreenImage}`} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2FIMG_6802.jpg?alt=media" alt="Full screen" />
+        <img className={`${styles.fullScreenImage}`} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2FIMG_6802.jpg?alt=media" alt="Full screen" draggable="false"/>
       </div>
 
       <div id={styles.nextPage}>

@@ -6,6 +6,8 @@ import Userinfo from './components/userInfo/userinfo';
 import Cart from './components/shoppingCart/shoppingcart';
 import Shop from './components/shop/shop';
 import About from './components/about/about';
+// import CartProvider from './CartContext';
+
 
 const App: React.FC = () => {
 

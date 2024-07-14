@@ -10,6 +10,10 @@ const Navbar: React.FC = () =>{
     const handleShowCart = () => setCartOpen(true);
     const handleCloseCart = () => setCartOpen(false);
 
+    const [menuOpen, setMenuOpen] = useState(false);
+    const handleShowMenu = () => setMenuOpen(true);
+    const handleCloseMenu = () => setMenuOpen(false);
+
     return(
         <>
             {cartOpen && <div className={styles.overlay} onClick={handleCloseCart}></div>}
@@ -19,8 +23,20 @@ const Navbar: React.FC = () =>{
                         <div className={styles.Xmark} onClick={handleCloseCart}> 
                             <FontAwesomeIcon icon={faXmark} /> 
                         </div>
+                    <h2 className={styles.checkout}> CHECKOUT </h2>
                 </div>
             </div>
+
+            {menuOpen && <div className={styles.overlay} onClick={handleCloseMenu}></div>}
+            <div className={`${styles.menu} ${menuOpen ? styles.open : ''}`}>
+                <div className={styles.header}>
+                    <div className={styles.menuList}> home </div>
+                        <div className={styles.menuX} onClick={handleCloseMenu}> 
+                            <FontAwesomeIcon icon={faXmark} /> 
+                        </div>
+                </div>
+            </div>
+
             <div className={styles.container}>
                 <div className={styles.home}>
                     <div className={styles.vzero}>
@@ -31,9 +47,11 @@ const Navbar: React.FC = () =>{
                             <FontAwesomeIcon icon={faShoppingCart} />
                         </div>
                     )}
-                    <div className ={styles.faBars}>
+                    {!menuOpen && (
+                        <div className ={styles.faBars} onClick={handleShowMenu}>
                         <FontAwesomeIcon icon={faBars} />
-                    </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </>

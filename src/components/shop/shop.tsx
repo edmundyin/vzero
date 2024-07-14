@@ -1,12 +1,12 @@
 import Navbar from "../navbar/navbar";
 import styles from "./shop.module.css"
-// import { products } from "../../products";
+import { useContext } from "react";
 
 const Shop: React.FC = () => {
     return (
         <div className={styles.container}>
             <div>
-                <Navbar />
+                <Navbar/>
                 <div className={styles.kaizenPants}>
                     <img src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Ftest.jpg?alt=media" />
                     <div className={styles.information}>
