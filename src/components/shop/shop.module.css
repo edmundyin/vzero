@@ -155,6 +155,7 @@ li{
         margin: 5px;
         height:25vh;
         margin-bottom: 0px;
+        height: auto;
     }
     .selectSize{
         font-size: 13px;
@@ -179,7 +180,9 @@ li{
         width: 320px;
         height: auto;
     }
-    .addToCart{
+    .addToCart {
         justify-content: center;
+        margin-top: 10px; /* Add margin-top to prevent overlapping */
+        width: 100%; /* Ensure the button takes full width */
     }
 }
