@@ -345,11 +345,6 @@ a{
 
 @media (max-width: 570px) {
 
-    html, body{
-        overflow: hidden;
-        touch-action: none;
-    }
-
   .trackContainer {
     display: none;
   }
