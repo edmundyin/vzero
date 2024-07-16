@@ -30,11 +30,24 @@ const Navbar: React.FC = () =>{
             {menuOpen && <div className={styles.overlay} onClick={handleCloseMenu}></div>}
             <div className={`${styles.menu} ${menuOpen ? styles.open : ''}`}>
                 <div className={styles.header}>
-                    <div className={styles.menuList}> home </div>
                         <div className={styles.menuX} onClick={handleCloseMenu}> 
                             <FontAwesomeIcon icon={faXmark} /> 
                         </div>
                 </div>
+                <div className={styles.menuList}> 
+                        <ul className={styles.list}>
+                            <Link className={styles.link} to="/home">
+                                <li className={styles.menuOptions}>HOME</li>
+                            </Link>
+                            <Link className={styles.link} to="/shop">
+                                <li className={styles.menuOptions}>SHOP</li>
+                            </Link>
+                            <a href="https://vzerogallery.web.app/" target="_blank">
+                                <li className={styles.menuOptions}>ABOUT</li>
+                            </a>
+                            
+                        </ul> 
+                    </div>
             </div>
 
             <div className={styles.container}>

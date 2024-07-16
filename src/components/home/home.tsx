@@ -149,7 +149,7 @@ const Home: React.FC = () => {
           <Link className={styles.link} to="/shop"> shop now </Link>
         </div>
         <div className={styles.about}>
-          <a href="https://www.instagram.com/vzero.xyz/" target='_blank'>
+          <a href="https://vzerogallery.web.app/" target='_blank'>
             <span className={styles.link}> about us </span>
           </a>
         </div>
@@ -182,7 +182,7 @@ const Home: React.FC = () => {
                 style in the dynamic realm of fashion. Born from the collective passion of two friends,
                 our adventure commenced with a shared love for rock climbing.
               </span>
-              <a href="https://www.instagram.com/vzero.xyz/" target='_blank'>
+              <a href="https://www.instagram.com" target='_blank'>
                 <span className={styles.poetsen}>instagram</span>
               </a>
             </div>
