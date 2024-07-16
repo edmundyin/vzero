@@ -56,7 +56,6 @@ h1{
 .size{
     margin: 7px;
     font-size: 17px;
-    opacity: 0.8;
     border: white;
     border: 3px solid white; /* Adds white borders with border radius */
     padding: 5px 10px; /* Adds padding inside the button for better look */
@@ -67,7 +66,7 @@ h1{
     opacity: 1;
 }
 
-.size:hover{
+.sizes:hover{
     color: white;
     cursor: pointer;
     opacity: 1;
@@ -96,11 +95,6 @@ h1{
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     border: 5px solid white;
     padding: 5px 10px;
-}
-
-.cart:hover{
-    opacity: 1;
-    cursor: pointer;
 }
 
 .description{
@@ -147,6 +141,8 @@ li{
     body{
         height: 100%;
         overflow: auto;
+        overflow-x: hidden;
+        margin-left: 0;
     }
     .information{
         margin-left: 0px;
