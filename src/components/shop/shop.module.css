@@ -25,7 +25,7 @@ h1{
     font-optical-sizing: auto;
     font-size: 15px;
     color: white;
-    opacity: 0.8;
+    opacity: 1;
     width: 95vw;
     margin-left: 30px;
 }
@@ -50,7 +50,7 @@ h1{
     font-size: 17px;
     margin-right: 10px;
     margin-top: 10px;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .size{
@@ -92,7 +92,7 @@ h1{
 .cart{
     font-size: 25px;
     color: white;
-    opacity: 0.8;
+    opacity: 0.5;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     border: 5px solid white;
     padding: 5px 10px;
@@ -116,7 +116,7 @@ h1{
     margin-left: 20;
     list-style-type: none;
     color: white;
-    opacity: 0.8;
+    opacity: 1;
     font-size: 15px;
 }
 
@@ -150,38 +150,57 @@ li{
     }
     .information{
         margin-left: 0px;
-        
+        width: 100vw;
     }
     .kaizenPants{
         margin: 5px;
         height:25vh;
         margin-bottom: 0px;
-        height: auto;
+        width: 100vw;
+        margin-left: 0;
+    }
+    .sizeChart{
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .sizes{
+        margin: 0;
     }
     .selectSize{
         font-size: 13px;
+        margin: 10px;
     }
     .title{
-        justify-content: center;
-        flex-direction: column;
+        margin-top: 10px;
         margin-left: 0px;
     }
     .itemTitle{
+        margin-top: 0;
+        margin-left: 10px;
         margin-bottom: 0px;
+        opacity: 1;
     }
     .price{
         top: 0;
-        margin: 0;
+        right: 0;
+        margin-top: 25px;
         margin-bottom: 20px;
     }
     .list{
         padding: 20px;
+        margin-top: 0;
+        padding: 0;
+        margin-left: 10px;
     }
     .image{
         width: 320px;
         height: auto;
     }
     .addToCart {
+        width: 100vw;
         justify-content: center;
+        margin-left: 0;
     }
 }
