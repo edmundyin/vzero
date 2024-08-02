@@ -6,10 +6,10 @@ type Size = 'XS' | 'S' | 'M' | 'L';
 
 const renderBuyButton = (selectedSize: Size) => {
     const stripeBuyButtons: Record<Size, string> = {
-        XS: "buy_btn_1PbmCUKNON36Neac11rj5tRk",
-        S: "buy_btn_1PcxiqKNON36NeacAbVgiqEp",
-        M: "buy_btn_1PcxiGKNON36NeacSYrWV8gI",
-        L: "buy_btn_1PcxgKKNON36NeacuCLndaeG"
+        XS: "buy_btn_1Pj9TtKNON36NeacspBcKbVE",
+        S: "buy_btn_1Pj9WsKNON36NeacuJFGAlxh",
+        M: "buy_btn_1Pj9ZHKNON36NeacmpPZj2s4",
+        L: "buy_btn_1Pj9ZoKNON36Neac8ohtPBCN"
     };
 
     return (
