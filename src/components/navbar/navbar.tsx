@@ -53,7 +53,9 @@ const Navbar: React.FC = () =>{
             <div className={styles.container}>
                 <div className={styles.home}>
                     <div className={styles.vzero}>
-                        <Link className={styles.link} to="/home">vzero</Link>
+                        <Link className={styles.link} to="/home">
+                            <img className={styles.logo} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fvzeroblackoutline.png?alt=media" draggable="false" />
+                        </Link>
                     </div>
                     {!cartOpen && (
                         <div className={styles.faShoppingCart} onClick={handleShowCart}>

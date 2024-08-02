@@ -60,7 +60,7 @@ const Shop: React.FC = () => {
                             ))}
                         </div>
                         <div className={styles.sizeChart}>
-                            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fvzerosizechart.png?alt=media" draggable="false" />
+                            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2FIMG_2900.jpeg?alt=media" draggable="false" />
                         </div>
                         <div className={styles.addToCart}>
                             {selectedSize ? (

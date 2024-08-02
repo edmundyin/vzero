@@ -22,6 +22,12 @@ a{
     }
 }
 
+.logo{
+    width: 140px;
+    height: auto;
+    maring-top: 15px;
+}
+
 .dimmed {
     opacity: 0.6;
     transition: opacity 0.5s;
