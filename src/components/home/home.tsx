@@ -157,13 +157,13 @@ const Home: React.FC = () => {
       <div className={styles.shopkaizen}>
         <div className={styles.trackContainer}>
           <div id={styles.imagetrack} data-mouse-down-at="0" data-prev-percentage="0">
-            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fxander4.jpg?alt=media" draggable="false" />
-            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Ftomoi1%20(1).jpg?alt=media" draggable="false" />
-            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fxander1-min.jpeg?alt=media" draggable="false" />
-            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Ftomoi2.jpg?alt=media" draggable="false" />
-            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fxander2-min.jpeg?alt=media" draggable="false" />
-            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Ftomoi3.jpg?alt=media" draggable="false" />
-            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fxander3-min.jpeg?alt=media" draggable="false" />
+            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fxander4.webp?alt=media" draggable="false" />
+            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Ftomoi1.webp?alt=media" draggable="false" />
+            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fxander1-min.webp?alt=media" draggable="false" />
+            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Ftomoi2.webp?alt=media" draggable="false" />
+            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fxander2-min.webp?alt=media" draggable="false" />
+            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Ftomoi3.webp?alt=media" draggable="false" />
+            <img className={styles.image} src="https://firebasestorage.googleapis.com/v0/b/vzero-1aef8.appspot.com/o/images%2Fxander3-min.webp?alt=media" draggable="false" />
           </div>
         </div>
       </div>
